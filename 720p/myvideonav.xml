@@ -57,6 +57,7 @@
 	<control type="group">
 		<include>FullscreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
+		<include>Furniture_InfoPanel</include>
 		<include>Furniture_Time</include>		
 		<include>Conditions_HiddenByInfoPages</include>
 		<include>Furniture_WindowRSS</include>
