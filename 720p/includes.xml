@@ -20,6 +20,7 @@
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_Wall.xml" />
 <include file="Viewtype_InfoPanel.xml" />
+<include file="Viewtype_StripShow.xml" />
 <!-- <include file="Viewtype_Panel.xml" /> -->
 
 <!-- Text colours ================================== -->

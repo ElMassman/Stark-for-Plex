@@ -2,7 +2,14 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-	
+
+	<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>stripshow/stripshow_bg.pn</texture>
+			<visible>Control.IsVisible(51)</visible>
+			<include>Animation_CommonFade</include>
+		</control>
+
     <control type="image" id="101">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -26,26 +33,25 @@
 		<visible>Skin.String(CustomPicturesFolder)</visible>
 	</control>
 	
-	<control type="image">
+	<!-- <control type="image">
 		<include>FullscreenDimensions</include>
 		<texture>windows/fanart_back.png</texture>
         <visible>!Skin.HasSetting(nopicturefanart) + !Control.IsVisible(53) + !IsEmpty(listitem.filenameandpath)</visible>
-		<visible>substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif)</visible>		
-		<animation effect="fade" end="0" time="200">WindowClose</animation>
+				<animation effect="fade" end="0" time="200">WindowClose</animation>
 		<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>		
-	</control>
+	</control> -->
 
 	<control type="largeimage" id="71">
 		<include>FullscreenDimensions</include>
         <visible>!Skin.HasSetting(nopicturefanart) + !Control.IsVisible(53) + !IsEmpty(listitem.filenameandpath)</visible>
-		<visible>substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif)</visible>		
+				
 		<animation effect="fade" end="0" time="200">WindowClose</animation>
 		<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
 		<texture>$INFO[listitem.filenameandpath]</texture>
 		<fadetime>400</fadetime>
 		<aspectratio align="top">keep</aspectratio>	
 	</control>
-	
+
 	<include>Furniture_WallBackground</include>
 	
 	<control type="group">
@@ -59,7 +65,8 @@
 		<include>Viewtype_List</include>
 		<include>Viewtype_Showcase</include>
 		<include>Viewtype_Coverflow</include>
-		<include>Viewtype_Wall</include>		
+		<include>Viewtype_Wall</include>
+		<include>Viewtype_StripShow</include>		
 
 		<include>Furniture_WallTime</include>
 		<include>Furniture_WallRSS</include>		
@@ -86,8 +93,8 @@
 					<include>Objects_MediaMenuButton</include>
 					<onclick>SetFocus(69)</onclick>
 				</control>
-
-				<include>Objects_FlattenFlowButton</include>	
+				<include>Objects_ThemeButton</include>
+								<include>Objects_FlattenFlowButton</include>	
 				
 				<control type="button" id="3">
 					<label>103</label>

@@ -290,7 +290,7 @@
 			<include>Objects_MediaMenuButton</include>
 			<onclick>Skin.ToggleSetting(darktheme)</onclick>
 			<onclick>XBMC.ReloadSkin()</onclick>
-			<visible>Control.IsVisible(57)</visible>
+			<visible>Control.IsVisible(57) | Control.IsVisible(51)</visible>
 		</control>
 		</include>
 	
@@ -581,7 +581,7 @@
 			<height>57</height>
 			<texture>showcase/showcase_menupanel.png</texture>
 			<include>Animation_MediaMenuSlide</include>
-			<visible>Control.IsVisible(57) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(52)</visible>
+			<visible>Control.IsVisible(57) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(52) | Control.IsVisible(51)</visible>
 		</control>
 	</include>
 	
