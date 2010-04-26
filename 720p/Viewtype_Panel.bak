@@ -1,0 +1,281 @@
+<includes>
+	<include name="PanelVisible">
+        <visible>Control.IsVisible(52)</visible>
+    </include>
+	<include name="ListFade2">
+		<control type="image" id="102">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<texture>-</texture>
+			<visible>Control.HasFocus(52) + [!Container().OnNext + !Container().OnPrevious]</visible>
+			<animation effect="fade" start="-100" end="0" time="150">Visible</animation>
+		</control>
+	</include>
+		<include name="Animation_ListPanelSlide_Slim">
+		<animation effect="slide" time="700" start="-800,0" end="0,0" tween="cubic" easing="out">Visible</animation>
+		<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
+	</include>
+	<include name="Viewtype_Panel">
+		<control type="group">
+			<visible>Control.IsVisible(52)</visible>
+				<!-- Panel -->
+	<control type="image">
+		<description>Panel</description>
+		<posx>108</posx>
+		<posy>85</posy>
+		<width>1065</width>
+		<height>550</height>
+		<texture>filebrowser/filebrowser_backpanel.png</texture>
+		<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+	</control>
+	<control type="image">
+		<description>Panel</description>
+		<posx>108</posx>
+		<posy>85</posy>
+		<width>1064</width>
+		<height>550</height>
+		<texture>filebrowser/filebrowser_frontpanel.png</texture>
+		<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+	</control>
+	<control type="image">
+		<description>background image</description>
+		<posx>191</posx>
+		<posy>121</posy>
+		<width>703</width>
+		<height>400</height>
+		<aspectratio>scale</aspectratio>
+		<texture>$INFO[listitem.property(fanart_image)]</texture>
+		<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+	</control>
+	<control type="image">
+		<description>background image</description>
+		<posx>191</posx>
+		<posy>121</posy>
+		<width>703</width>
+		<height>400</height>
+		<aspectratio>scale</aspectratio>
+		<visible>Container.Content(episodes)</visible>
+		<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+		<texture>$INFO[ListItem.Icon]</texture>
+	</control>
+	<control type="image">
+		<description>info</description>
+		<posx>191</posx>
+		<posy>121</posy>
+		<width>703</width>
+		<height>400</height>
+		<texture>panel/overlay.png</texture>
+		<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+		<visible>Window.IsVisible(4567)</visible>
+	</control>
+	<control type="textbox">
+	<posx>211</posx>
+	<posy>310</posy>
+	<width>663</width>
+	<align>left</align>
+	<height>202</height>
+	<font>Font_SettingsSectionTitle</font>
+	<visible>!IsEmpty(ListItem.Plot)</visible>
+	<visible>Control.IsVisible(52) + Window.IsVisible(4567)</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+	<autoscroll time="3000" delay="7000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+	<info>ListItem.Plot</info>
+	</control>
+	<control type="textbox">
+	<posx>211</posx>
+	<posy>310</posy>
+	<width>663</width>
+	<align>left</align>
+	<height>202</height>
+	<font>Font_SettingsSectionTitle</font>
+	<visible>Container.Content(seasons) + [Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+	<autoscroll delay="7000" time="3000" repeat="0" />
+	<info>Container.ShowPlot</info>
+	</control>
+	<control type="textbox">
+	<posx>953</posx>
+	<posy>330</posy>
+	<width>180</width>
+	<align>center</align>
+	<height>70</height>
+	<font>Font_SettingsSectionTitle</font>
+	<visible>Control.IsVisible(52) + !Window.IsVisible(4567)</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+	<label>PRESS RIGHT FOR MORE INFO</label>
+	</control>
+	<control type="textbox">
+	<posx>968</posx>
+	<posy>330</posy>
+	<width>150</width>
+	<align>center</align>
+	<height>70</height>
+	<font>Font_SettingsSectionTitle</font>
+	<visible>Control.IsVisible(52) + Window.IsVisible(4567)</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+	<label>PRESS BACK TO EXIT</label>
+	</control>
+		<---Panel Invisible List--->
+			<control type="list" id="52">
+				<viewtype label="31998">panel</viewtype>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1</width>
+				<height>1</height>
+				<pagecontrol>2505</pagecontrol>
+				<onleft>7000</onleft>
+				<onright>xbmc.activatewindow(4567)</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<itemlayout height="1">
+				</itemlayout>
+				<focusedlayout height="1">
+				</focusedlayout>
+			</control>
+		</control>
+	<control type="image">
+	            	    <description>IMDB Star Rating</description>
+	            	    <posy>525</posy>
+	              		<posx>405</posx>
+ 		               	<width>260</width>
+ 		               	<height>65</height>
+ 		               	<info>ListItem.StarRating</info>
+			<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden</animation>
+	<visible>[Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+ 		               	<colordiffuse>997c7c7c</colordiffuse>
+						<visible>!Skin.HasSetting(movieratingtext)</visible>
+    	      		</control>
+	<control type="label">
+	<posx>197</posx>
+	<posy>513</posy>
+	<font>Font_MainMenu</font>
+	<width>695</width>
+	<align>left</align>
+	<label>$INFO[ListItem.Label]</label>
+	<visible>[Control.IsVisible(52) + !Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	<control type="label">
+	<posx>211</posx>
+	<posy>121</posy>
+	<font>Font_MainMenu</font>
+	<width>677</width>
+	<align>left</align>
+	<label>$INFO[ListItem.TVShowTitle]</label>
+	<visible>!Container.Content(episodes) + [Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	<control type="label">
+	<posx>211</posx>
+	<posy>121</posy>
+	<font>Font_MainMenu</font>
+	<width>677</width>
+	<align>left</align>
+	<label>$INFO[ListItem.Title]</label>
+	<visible>Container.Content(episodes) + [Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	<control type="label">
+	<posx>211</posx>
+	<posy>195</posy>
+	<font>Font_SettingsSectionTitle</font>
+	<width>695</width>
+	<align>left</align>
+	<label>[COLOR 9b3cd2fd]$INFO[ListItem.Genre][COLOR]</label>
+	<visible>Control.IsVisible(52) + Window.IsVisible(4567)</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	<control type="label">
+	<posx>211</posx>
+	<posy>195</posy>
+	<font>Font_SettingsSectionTitle</font>
+	<width>695</width>
+	<align>left</align>
+	<label>[COLOR 9b3cd2fd]$INFO[ListItem.Title][COLOR]</label>
+	<visible>Container.Content(seasons) + [Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	<control type="label">
+	<posx>211</posx>
+	<posy>195</posy>
+	<font>Font_SettingsSectionTitle</font>
+	<width>695</width>
+	<align>left</align>
+	<label>[COLOR 9b3cd2fd]$INFO[ListItem.TVShowTitle][COLOR]</label>
+	<visible>Container.Content(episodes) + [Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	<control type="label">
+	<posx>211</posx>
+	<posy>230</posy>
+	<font>Font_SettingsSectionTitle</font>
+	<width>695</width>
+	<align>left</align>
+	<label>[COLOR 9b3cd2fd]SEASON:[COLOR] [COLOR FFFFFFFF]$INFO[ListItem.Season][COLOR] [COLOR 9b3cd2fd]EPISODE:[COLOR] [COLOR FFFFFFFF]$INFO[ListItem.Episode][COLOR]</label>
+	<visible>Container.Content(episodes) + [Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	<control type="label">
+	<posx>211</posx>
+	<posy>265</posy>
+	<font>Font_SettingsSectionTitle</font>
+	<width>695</width>
+	<align>left</align>
+	<label>[COLOR 9b3cd2fd]ORIGINALLY AIRED:[COLOR] [COLOR FFFFFFFF]$INFO[ListItem.Date][COLOR]</label>
+	<visible>Container.Content(episodes) + [Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	<control type="label">
+	<posx>211</posx>
+	<posy>265</posy>
+	<font>Font_SettingsSectionTitle</font>
+	<width>695</width>
+	<align>left</align>
+	<label>[COLOR 9b3cd2fd]ORIGINALLY AIRED:[COLOR] [COLOR FFFFFFFF]$INFO[ListItem.Date][COLOR]</label>
+	<visible>Container.Content(tvshows) + [Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	<control type="label">
+	<posx>211</posx>
+	<posy>230</posy>
+	<font>Font_SettingsSectionTitle</font>
+	<width>695</width>
+	<align>left</align>
+	<label>[COLOR 9b3cd2fd]EPISODES:[COLOR] [COLOR FFFFFFFF]$INFO[ListItem.Episode][COLOR]</label>
+	<visible>!Container.Content(episodes) + [Control.IsVisible(52) + Window.IsVisible(4567)]</visible>
+	<animation effect="fade" delay="300" time="400" start="0" end="100">Visible</animation>
+	<animation effect="fade" time="400" delay="500" start="100" end="0">Hidden
+</animation>
+	</control>
+	</include>
+</includes>
