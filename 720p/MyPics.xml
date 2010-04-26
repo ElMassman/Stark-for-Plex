@@ -94,6 +94,15 @@
 					<onclick>SetFocus(69)</onclick>
 				</control>
 				<include>Objects_ThemeButton</include>
+				<control type="togglebutton" id="911">
+			<label>Layout: Large</label>
+			<altlabel>Layout: Small</altlabel>
+			<usealttexture>Skin.HasSetting(stripshowmax)</usealttexture>
+			<include>Objects_MediaMenuButton</include>
+			<onclick>Skin.ToggleSetting(stripshowmax)</onclick>
+			<!-- <onclick>XBMC.ReloadSkin()</onclick> -->
+			<visible>Control.IsVisible(51)</visible>
+		</control>
 								<include>Objects_FlattenFlowButton</include>	
 				
 				<control type="button" id="3">
