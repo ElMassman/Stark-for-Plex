@@ -475,8 +475,19 @@
 	<string id="31956">ALL APPS</string>
 	<string id="31957">FEATURED</string>
 
-<!-- Extra TV Views -->
+<!-- Plex Extras -->
 	
+	<string id="31987">ON</string>
+	<string id="31988">OFF</string>
+	<string id="31989">OVERLAY</string>
+	<string id="31990">SMALL</string>
+	<string id="31991">LARGE</string>
+	<string id="31992">LIGHT</string>
+	<string id="31993">DARK</string>
+	<string id="31994">LAYOUT</string>
+	<string id="31995">THEME</string>
+	<string id="31996">STRIPSHOW</string>
+	<string id="31997">QUIT PLEX</string>
 	<string id="31998">PANEL</string>
 	<string id="31999">INFOPANEL</string>
 
