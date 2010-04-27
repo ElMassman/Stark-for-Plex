@@ -339,7 +339,7 @@
     <label>$INFO[Player.FinishTime]</label>
     <visible>Skin.HasSetting(FinishTimeOnVideoOSD)</visible>
   </control>
-
+<include>Furniture_VideoOSDMediaFlags</include>
   </control>
 </controls>
 </window>
