@@ -95,8 +95,8 @@
 				</control>
 				<include>Objects_ThemeButton</include>
 				<control type="togglebutton" id="911">
-			<label>Layout: Large</label>
-			<altlabel>Layout: Small</altlabel>
+			<label>$LOCALIZE[31994]: $LOCALIZE[31991]</label>
+			<altlabel>$LOCALIZE[31994]: $LOCALIZE[31990]</altlabel>
 			<usealttexture>Skin.HasSetting(stripshowmax)</usealttexture>
 			<include>Objects_MediaMenuButton</include>
 			<onclick>Skin.ToggleSetting(stripshowmax)</onclick>

@@ -408,7 +408,7 @@
 
 	<include name="Furniture_InfoPanelMediaFlags">		
 		<control type="group">
-			<visible>Control.IsVisible(56) + !Skin.HasSetting(nomediaflags) + Container.Content(episodes)</visible>
+			<visible>Control.IsVisible(56) + !Skin.HasSetting(nomediaflags) + [Container.Content(episodes) | Container.Content(movies)]</visible>
 			<include>Animation_CommonFade</include>
 			<control type="group">
 				<posx>320</posx>

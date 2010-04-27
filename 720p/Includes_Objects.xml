@@ -273,8 +273,8 @@
 
 	<include name="Objects_WatchedButton">
 		<control type="togglebutton" id="912">
-			<label>Overlay: Off</label>
-			<altlabel>Overlay: On</altlabel>
+			<label>$LOCALIZE[31989]: $LOCALIZE[31988]</label>
+			<altlabel>$LOCALIZE[31989]: $LOCALIZE[31987]</altlabel>
 			<usealttexture>Skin.HasSetting(WatchedOverlay)</usealttexture>
 			<include>Objects_MediaMenuButton</include>
 			<onclick>Skin.ToggleSetting(WatchedOverlay)</onclick>
@@ -284,8 +284,8 @@
 
 		<include name="Objects_ThemeButton">
 		<control type="togglebutton" id="913">
-			<label>Theme: Light</label>
-			<altlabel>Theme: Dark</altlabel>
+			<label>$LOCALIZE[31995]: $LOCALIZE[31992]</label>
+			<altlabel>$LOCALIZE[31995]: $LOCALIZE[31993]</altlabel>
 			<usealttexture>Skin.HasSetting(darktheme)</usealttexture>
 			<include>Objects_MediaMenuButton</include>
 			<onclick>Skin.ToggleSetting(darktheme)</onclick>

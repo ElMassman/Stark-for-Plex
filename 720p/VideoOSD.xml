@@ -37,23 +37,23 @@
 		</control>		
 		<control type="button" id="9">
 			<include>Objects_OSDButton</include>
-			<onclick>XBMC.ActivateWindow(124)</onclick>		
+			<onclick>XBMC.ActivateWindow(125)</onclick>	
 		</control>
 		<control type="button" id="10">
 			<include>Objects_OSDButton</include>
-			<onclick>XBMC.ActivateWindow(125)</onclick>	
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
 		</control>
 		<control type="button" id="11">
 			<include>Objects_OSDButton</include>
-			<onclick>XBMC.PlayerControl(Previous)</onclick>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
 		</control>
 		<control type="button" id="12">
 			<include>Objects_OSDButton</include>
-			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+			<onclick>XBMC.PlayerControl(Stop)</onclick>
 		</control>
 		<control type="button" id="13">
 			<include>Objects_OSDButton</include>
-			<onclick>XBMC.PlayerControl(Play)</onclick>
+			<onclick>XBMC.PlayerControl(Play)</onclick>	
 		</control>
 		<control type="button" id="14">
 			<include>Objects_OSDButton</include>
@@ -89,27 +89,34 @@
 		</control>		
 		<control type="button">
 			<include>Objects_OSDButtonTop</include>
-			<texturenofocus>osd/osd_button_playlist.png</texturenofocus>	
+			<texturenofocus>osd/osd_button_book.png</texturenofocus>	
 			<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(9)">Conditional</animation>				
 		</control>
 		<control type="button">
 			<include>Objects_OSDButtonTop</include>
-			<texturenofocus>osd/osd_button_book.png</texturenofocus>
+			<texturenofocus>osd/osd_button_skipbwd.png</texturenofocus>
 			<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(10)">Conditional</animation>				
 		</control>
 		<control type="button">
 			<include>Objects_OSDButtonTop</include>
-			<texturenofocus>osd/osd_button_skipbwd.png</texturenofocus>	
+			<texturenofocus>osd/osd_button_rew.png</texturenofocus>	
 			<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(11)">Conditional</animation>				
 		</control>
 		<control type="button">
 			<include>Objects_OSDButtonTop</include>
-			<texturenofocus>osd/osd_button_rew.png</texturenofocus>	
+			<texturenofocus>osd/osd_button_stop.png</texturenofocus>	
 			<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(12)">Conditional</animation>							
 		</control>
 		<control type="button">
 			<include>Objects_OSDButtonTop</include>
+			<texturenofocus>osd/osd_button_pause.png</texturenofocus>
+			<visible>Player.Playing</visible>
+			<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(13)">Conditional</animation>				
+		</control>
+		<control type="button">
+			<include>Objects_OSDButtonTop</include>
 			<texturenofocus>osd/osd_button_play.png</texturenofocus>
+			<visible>Player.Paused</visible>
 			<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(13)">Conditional</animation>				
 		</control>
 		<control type="button">

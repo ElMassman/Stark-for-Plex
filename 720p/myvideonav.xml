@@ -10,7 +10,7 @@
 		<visible>!Skin.String(CustomMoviesFolder)</visible>
 		<visible>Skin.HasSetting(videomovies)</visible>
 		<visible>Skin.HasSetting(nomoviefanart)|IsEmpty(listitem.property(fanart_image))</visible> 
-		<visible>[IsEmpty(Fanart.Image)+IsEmpty(listitem.property(fanart_image))] | Skin.HasSetting(notvfanart)</visible> 		
+		<visible>[IsEmpty(Fanart.Image) + IsEmpty(listitem.property(fanart_image))] | Skin.HasSetting(notvfanart)</visible> 		
 	</control>
 
 	<control type="multiimage">
@@ -38,7 +38,7 @@
 
 	<control type="largeimage" id="102">
 		<include>FullscreenDimensions</include>
-        <visible>Control.IsVisible(57) + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image))</visible>
+        <visible>[[[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image)] | !Control.IsVisible(56)</visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
@@ -46,7 +46,7 @@
 	
 	<control type="image">
 		<include>FullscreenDimensions</include>
-        <visible>[Container.Content(seasons) | Container.Content(episodes)] + !IsEmpty(Fanart.Image) + !Skin.HasSetting(notvfanart) + !Control.IsVisible(56)</visible>
+        <visible>[Container.Content(seasons) | Container.Content(episodes)] + !IsEmpty(Fanart.Image) + !Skin.HasSetting(nofanart) + !Control.IsVisible(56)</visible>
 		<animation effect="fade" end="0" time="200">WindowClose</animation>
 		<animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
 		<texture>$INFO[Fanart.Image]</texture>
@@ -113,7 +113,7 @@
 					<usealttexture>Skin.HasSetting(nomoviefanart)</usealttexture>
 					<onclick>Skin.SetBool(nomoviefanart)</onclick>
 					<altclick>Skin.Reset(nomoviefanart)</altclick>
-					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(57)</visible>
+					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies)</visible>
 				</control>
 				
 				<control type="togglebutton" id="902">

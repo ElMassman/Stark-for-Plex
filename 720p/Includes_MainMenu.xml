@@ -147,8 +147,8 @@
 			</item>				
 			<item id="22">
 				<description>Shutdown</description>
-				<label>31019</label>
-				<onclick>XBMC.Shutdown()</onclick>
+				<label>31997</label>
+				<onclick>Shutdown</onclick>
 				<visible>Skin.HasSetting(shutdown)</visible>
 			</item>			
 		</content>
