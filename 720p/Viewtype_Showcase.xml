@@ -1,5 +1,28 @@
 <includes>
 
+
+	
+	<include name="leftfadeout">
+		<visible>Container.OnNext</visible>
+                <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+	</include>
+
+	<include name="leftfadein">
+		<visible>!Container.OnPrevious</visible>
+                <animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
+	</include>
+
+	<include name="rightfadeout">
+		<visible>Container.OnPrevious</visible>
+                <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+	</include>
+
+	<include name="rightfadein">
+		 <visible>!Container.OnNext</visible>
+                <animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+	</include>
+
+
     <include name="ShowcaseVisible">
         <visible>Control.IsVisible(57)</visible>
     </include>
@@ -1132,6 +1155,7 @@
             <visible>Control.IsVisible(57) + Container.OnNext + !Skin.HasSetting(flattenshowcase)</visible>
             <animation effect="slide" end="-90,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>10</posx>
                 <visible>Container.OnNext</visible>
                 <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
@@ -1173,6 +1197,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>100</posx>
                 <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -1212,6 +1237,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>190</posx>
                 <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -1251,6 +1277,7 @@
                 </control>
             </control>
             <control type="group">
+		<include condition="!Skin.HasSetting(fullflow)">leftfadeout</include>
                 <posx>280</posx>
                 <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -1368,6 +1395,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>1090</posx>
                 <visible>!Container.OnNext</visible>
                 <animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
@@ -1409,6 +1437,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>1000</posx>
                 <animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -1448,6 +1477,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>910</posx>
                 <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -1487,6 +1517,7 @@
                 </control>
             </control>
             <control type="group">
+		<include condition="!Skin.HasSetting(fullflow)">rightfadein</include>
                 <posx>820</posx>
                 <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -1695,6 +1726,7 @@
             <visible>Control.IsVisible(57) + Container.OnPrevious + !Skin.HasSetting(flattenshowcase)</visible>
             <animation effect="slide" end="90,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>1000</posx>
                 <visible>Container.OnPrevious</visible>
                 <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
@@ -1736,6 +1768,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>910</posx>
                 <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -1775,6 +1808,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>820</posx>
                 <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -1814,6 +1848,7 @@
                 </control>
             </control>
             <control type="group">
+		<include condition="!Skin.HasSetting(fullflow)">rightfadeout</include>
                 <posx>730</posx>
                 <animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -1931,6 +1966,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>-80</posx>
                 <visible>!Container.OnPrevious</visible>
                 <animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
@@ -1972,6 +2008,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>10</posx>
                 <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -2011,6 +2048,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>100</posx>
                 <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -2050,6 +2088,7 @@
                 </control>
             </control>
             <control type="group">
+		<include condition="!Skin.HasSetting(fullflow)">leftfadein</include>
                 <posx>190</posx>
                 <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -2264,6 +2303,8 @@
             <visible>Control.IsVisible(57) + !Control.IsVisible(6001) + !Control.IsVisible(6002) + Control.IsVisible(960)</visible>
             <camera x="640" y="540" />
             <control type="group">
+		<include>Animation_Miniflow_Fade</include>
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>10</posx>
                 <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
@@ -2307,6 +2348,8 @@
                 </control>
             </control>
             <control type="group">
+		<include>Animation_Miniflow_Fade</include>
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>100</posx>
                 <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
@@ -2350,6 +2393,8 @@
                 </control>
             </control>
             <control type="group">
+		<include>Animation_Miniflow_Fade</include>
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>190</posx>
                 <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
@@ -2523,6 +2568,8 @@
             </control>
             <control type="group">
                 <posx>1000</posx>
+		<include>Animation_Miniflow_Fade</include>
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
 					<effect type="rotatey" center="1380" start="0" end="-55" time="800" tween="cubic" easing="inout" />
@@ -2565,6 +2612,8 @@
                 </control>
             </control>
             <control type="group">
+		<include>Animation_Miniflow_Fade</include>
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>910</posx>
                 <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
@@ -2608,6 +2657,8 @@
                 </control>
             </control>
             <control type="group">
+		<include>Animation_Miniflow_Fade</include>
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>820</posx>
                 <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">

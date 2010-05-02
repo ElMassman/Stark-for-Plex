@@ -356,12 +356,12 @@
 <!-- Welcome screen / Aeon Tour -->
 <!-- ENSURE LOWER/UPPER CASE IS OBEYED --> 
 
-	<string id="31650">Welcome to Aeon, the new home of home entertainment.[CR]The way you enjoy your movies, television shows, music and photos is[CR]about to change. First, though, you may want to watch this short visual[CR]introduction. Interested? Press Select. If not, press Back.</string>
+	<string id="31650">Welcome to Aeon, the new home of home entertainment.[CR]The way you enjoy your movies, television shows, music and photos is[CR]about to change. Please press the 'H' key to be taken to the home screen and start using Aeon.</string>
 	<string id="31651">Central to Aeon is a horizontally-scrolling menu which provides instant access to[CR]its various environments. Backdrops can be assigned to each option as either[CR]a single image or slideshow. The menu can be switched between positions[CR]with a single button-press. Time and RSS can also be relocated and detached.</string>
 	<string id="31652">Movies and music are enjoyed in Aeon through four distinct views.[CR]Each is designed to meet specific requirements. Showcase offers maximum[CR]artwork visibilty; Panel offers more conventional thumbnail views; List[CR]speaks for itself; Wall provides maximum screen real estate for large collections.</string>
 	<string id="31653">Aeon loves artwork. Its visual philosophy revolves entirely around the[CR]tastes and content of each individual user. Like action movies? Fantasy[CR]videogames? Rousing period drama? Decorate your environment accordingly.[CR]Posters and cover art, meanwhile, are displayed in beautiful high definition.</string>
 	<string id="31654">Building a library of movies, television shows or music lets Aeon exploit[CR]the full power of XBMC, providing a rich and informative browsing experience.[CR]Plot synopses and album reviews are just the tip of the iceberg thanks to[CR]info pulled from the IMDb, Allmusic, or one of many user-selected sources.</string>	
-	<string id="31655">PRESS SELECT TO BEGIN TOUR. PRESS BACK TO SKIP</string>
+	<string id="31655">PRESS 'H'</string>
 	<string id="31656">PRESS DOWN FOR NEXT SLIDE, SELECT TO SKIP</string>
 	<string id="31657">PRESS DOWN FOR NEXT SLIDE, UP FOR PREVIOUS SLIDE, OR SELECT TO SKIP</string>
 	<string id="31659">Navigating between Aeon's views and windows couldn't be easier.[CR]The Global Menu can be accessed at any time from any place, providing[CR]shortcuts to Settings, Customisation, and the Aeon Assistant. A four-way[CR]"compass" menu provides instant access to any view type.</string>
@@ -408,25 +408,25 @@
 	<string id="31800">STANDALONE SUBTITLES</string>
 	<string id="31801">TO USE STANDALONE SUBTITLES, THE SUBTITLE AND VIDEO FILES MUST SHARE THE SAME NAME.[CR]FOR EXAMPLE, VEXILLE.AVI WOULD REQUIRE THE SUBTITLE FILE VEXILE.SRT (EXTENSIONS MAY VARY)</string>
 	<string id="31802">MUSIC VIDEOS</string>
-	<string id="31803">XBMC HANDLES MUSIC VIDEOS IN MUCH THE SAME WAY AS MOVIES. IN LIBRARY MODE, JUST SPECIFY[CR]A FOLDER'S CONTENT AS 'MUSIC VIDEOS', CHOOSE AN ONLINE INFO SOURCE AND LET XBMC DO THE REST</string>
-	<string id="31804">EMULATION</string>
-	<string id="31805">XBMC CAN BE USED TO LAUNCH EMULATORS ON ALL PLATFORMS, THOUGH METHODS MAY DIFFER.[CR]CHECK THE XBMC FORUMS (WWW.XBMC.ORG) FOR SUPPORTED SOFTWARE AND OTHER TIPS</string>
+	<string id="31803">PLEX HANDLES MUSIC VIDEOS IN MUCH THE SAME WAY AS MOVIES. IN LIBRARY MODE, JUST SPECIFY[CR]A FOLDER'S CONTENT AS 'MUSIC VIDEOS', CHOOSE AN ONLINE INFO SOURCE AND LET PLEX DO THE REST</string>
+	<string id="31804">APPLICATIONS</string>
+	<string id="31805">PLEX HAS A WIDE RANGE OF APPS AVAILABLE TO DOWNLOAD FROM THE PLEX APP STORE. [CR]SELECT 'APP STORE' FROM THE HOME MENU TO START DOWNLOADING NOW.</string>
 	<string id="31806">ROTATE USING EXIF INFORMATION</string>
 	<string id="31807">MODERN CAMERAS EMBED SUBJECT DATA IN EVERY PICTURE THEY TAKE. WITH THIS OPTION ENABLED,[CR]PICTURES ROTATE THEMSELVES AUTOMATICALLY TO THE CORRECT POSITION WHEN DISPLAYED</string>
 	<string id="31808">LIVE WEATHER FORECASTS</string>
-	<string id="31809">XBMC DISPLAYS FORECASTS FOR UP TO THREE LOCATIONS, COURTESY OF WEATHER.COM.[CR]ALONG WITH YOUR LOCATIONS, YOU CAN ALSO CHOOSE BETWEEN METRIC AND US READINGS</string>
+	<string id="31809">PLEX DISPLAYS FORECASTS FOR UP TO THREE LOCATIONS, COURTESY OF WEATHER.COM.[CR]ALONG WITH YOUR LOCATIONS, YOU CAN ALSO CHOOSE BETWEEN METRIC AND US READINGS</string>
 	<string id="31810">GET A CLEARER VIEW</string>
 	<string id="31811">ONE-TOUCH RECOMPOSITION MAKES MOVING AEON'S MENU QUICK AND PAINLESS. JUST PUSH UP OR[CR]DOWN TO SWITCH POSITIONS AND ALL SCREEN FURNITURE REARRANGES ITSELF AUTOMATICALLY</string>
 	<string id="31812">MASS EXTERNAL STORAGE</string>
-	<string id="31813">HIGH CAPACITY (500GB+) REMOVABLE HARD DRIVES PROVIDE IDEAL STORAGE FOR LARGE HD[CR]MOVIE COLLECTIONS. XBMC CAN HANDLE THOUSANDS OF FILES FOR EVERY SOURCE YOU DEFINE</string>
+	<string id="31813">HIGH CAPACITY (500GB+) REMOVABLE HARD DRIVES PROVIDE IDEAL STORAGE FOR LARGE HD[CR]MOVIE COLLECTIONS. PLEX CAN HANDLE THOUSANDS OF FILES FOR EVERY SOURCE YOU DEFINE</string>
 	<string id="31814">A TRUE HIGH DEFINITION MEDIA ENVIRONMENT</string>
 	<string id="31815">AEON RENDERS THE MAJORITY OF ITS TEXTURES IN NATIVE 1080P, DOWNSCALING THEM TO SUIT[CR]ANY HD DISPLAY. IT STANDS AT THE PINNACLE OF DIGITAL ENTERTAINMENT</string>
 	<string id="31816">CAN YOUR HARDWARE HANDLE IT?</string>
-	<string id="31817">XBMC HAS MODEST REQUIREMENTS FOR ALL SYSTEMS, THOUGH IT RELIES ON CPU POWER[CR]SIGNIFICANTLY FOR HD VIDEO. PIXEL SHADER 3 CAPABLE VIDEOCARDS ARE ALSO HIGHLY RECOMMENDED</string>
+	<string id="31817">PLEX HAS MODEST REQUIREMENTS FOR ALL SYSTEMS, THOUGH IT RELIES ON CPU POWER[CR]SIGNIFICANTLY FOR HD VIDEO.</string>
 	<string id="31818">THE FINEST DETAILS</string>	
 	<string id="31819">CLICK THROUGH TO FURTHER MANAGE THE AEON EXPERIENCE</string>
 	<string id="31820">EACH TO THEIR OWN</string>
-	<string id="31821">XBMC SUPPORTS MULTIPLE USER PROFILES, ALLOWING INDIVIDUAL USERS TO SAVE THEIR OWN[CR]CONFIGURATIONS. RSS FEEDS, VIEW SETTINGS AND MEDIA LIBRARIES CAN BE SEPARATELY STORED</string>
+	<string id="31821">PLEX SUPPORTS MULTIPLE USER PROFILES, ALLOWING INDIVIDUAL USERS TO SAVE THEIR OWN[CR]CONFIGURATIONS. RSS FEEDS, VIEW SETTINGS AND MEDIA LIBRARIES CAN BE SEPARATELY STORED</string>
 
 <!-- Credits -->
 

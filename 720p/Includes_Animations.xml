@@ -8,7 +8,12 @@
 		<animation effect="fade" time="500">WindowOpen</animation>
 		<animation effect="fade" time="200">WindowClose</animation>
 	</include>
-	
+
+	<include name="Animation_Miniflow_Fade">
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+	</include>
+
 	<include name="Animation_CommonFadeIn">
 		<animation effect="fade" time="200">Visible</animation>
 		<animation effect="fade" time="500">WindowOpen</animation>
