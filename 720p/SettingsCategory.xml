@@ -21,7 +21,8 @@
 			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
 			<effect type="fade" start="100" end="0" time="300" />
 		</animation>
-		<include>Furniture_SettingsBackPanel</include>
+		<include condition="!Skin.HasSetting(darktheme)">Furniture_SettingsBackPanel</include>
+			<include condition="Skin.HasSetting(darktheme)">Furniture_SettingsBackPanel_Dark</include>
 	
 		<include>Settings_XBMCSettingsHeadings</include>
 

@@ -9,7 +9,8 @@
 		<info>Skin.String(CustomSettings)</info>
 	</control>
 
-	<include>Furniture_SettingsBackPanel</include>
+	<include condition="!Skin.HasSetting(darktheme)">Furniture_SettingsBackPanel</include>
+			<include condition="Skin.HasSetting(darktheme)">Furniture_SettingsBackPanel_Dark</include>
 
 	<control type="label">
 		<description>sectiontitle</description>
@@ -203,6 +204,7 @@
       <include>Objects_SettingsDefaultRadioButton</include>
       <label>Use Dark Theme</label>
       <onclick>Skin.ToggleSetting(darktheme)</onclick>
+	<onclick>XBMC.ReloadSkin()</onclick>
       <selected>Skin.HasSetting(darktheme)</selected>
     </control>
 		

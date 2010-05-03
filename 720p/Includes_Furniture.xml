@@ -1165,6 +1165,17 @@
 
 <!-- Settings windows -->
 
+	<include name="Furniture_SettingsBackPanel_Dark">
+		<control type="image">
+			<description>background image</description>
+			<posx>23</posx>
+			<posy>23</posy>
+			<width>1233</width>
+			<height>673</height>
+			<texture>infopanel/infopanel_panelback_episode.png</texture>
+		</control>
+	</include>
+
 	<include name="Furniture_SettingsBackPanel">
 		<control type="image">
 			<description>background image</description>

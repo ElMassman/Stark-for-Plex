@@ -21,7 +21,8 @@
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
 
-			<include>Furniture_SettingsBackPanel</include>
+			<include condition="!Skin.HasSetting(darktheme)">Furniture_SettingsBackPanel</include>
+			<include condition="Skin.HasSetting(darktheme)">Furniture_SettingsBackPanel_Dark</include>
 
 			<control type="label">
 				<description>sectiontitle</description>

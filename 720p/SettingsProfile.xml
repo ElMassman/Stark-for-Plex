@@ -9,7 +9,8 @@
 		<info>Skin.String(CustomSettings)</info>
 	</control>
 
-	<include>Furniture_SettingsBackPanel</include>
+	<include condition="!Skin.HasSetting(darktheme)">Furniture_SettingsBackPanel</include>
+			<include condition="Skin.HasSetting(darktheme)">Furniture_SettingsBackPanel_Dark</include>
 
 	<control type="label">
 		<description>sectiontitle</description>
