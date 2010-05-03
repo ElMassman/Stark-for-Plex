@@ -207,6 +207,13 @@
 	<onclick>XBMC.ReloadSkin()</onclick>
       <selected>Skin.HasSetting(darktheme)</selected>
     </control>
+
+	<control type="radiobutton" id="613">
+      <include>Objects_SettingsDefaultRadioButton</include>
+      <label>Enable Showcase for TV Shows</label>
+      <onclick>Skin.ToggleSetting(showcasetv)</onclick>
+      <selected>Skin.HasSetting(showcasetv)</selected>
+    </control>
 		
 	</control>
 

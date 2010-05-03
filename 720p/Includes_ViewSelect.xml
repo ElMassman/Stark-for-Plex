@@ -73,7 +73,7 @@
 			<onup>Container.SetViewMode(50)</onup>
 			<onup>SetFocus(900)</onup>
 			<onright>Container.SetViewMode(57)</onright>
-	<include condition="Skin.HasSetting(videotv)">InfoPanelButton</include>
+	<include condition="[!Skin.HasSetting(showcasetv) + Skin.HasSetting(videotv)]">InfoPanelButton</include>
 	<include condition="Window.IsActive(2)">StripShowButton</include>
 			<onright>SetFocus(900)</onright>
 			<ondown>Container.SetViewMode(55)</ondown>
@@ -107,23 +107,6 @@
 				<label>31752</label>			
 			</control>			
 		</control>
-		<!-- <control type="group">
-			<include>ViewChangeAnimBottom</include>		
-			<control type="image">
-				<visible>Skin.HasSetting(videotv)</visible>
-				<posx>545</posx>
-				<posy>513</posy>
-				<width>186</width>
-				<height>126</height>
-				<texture>viewselect/vs_icon_multiplex.png</texture>				
-			</control>
-			<control type="label">
-				<visible>Skin.HasSetting(videotv)</visible>
-				<include>ViewChangeLabel</include>
-				<posx>427</posx>
-				<posy>640</posy>
-				<label>31998</label>							</control>			
-		</control> -->
 		<control type="group">
 			<include>ViewChangeAnimBottom</include>		
 			<control type="image">
@@ -157,7 +140,7 @@
 		</control>
 		<control type="group">
 			<include>ViewChangeAnimRight</include>
-			<visible>Skin.HasSetting(videotv) + !Window.IsActive(2)</visible>
+			<visible>!Skin.HasSetting(showcasetv) + Skin.HasSetting(videotv) + !Window.IsActive(2)</visible>
 			<control type="image">
 				<posx>975</posx>
 				<posy>277</posy>
@@ -167,7 +150,7 @@
 			</control>
 			<control type="label">
 				<include>ViewChangeLabel</include>
-				<visible>Skin.HasSetting(videotv) + !Window.IsActive(2)</visible>
+				<visible>!Skin.HasSetting(showcasetv) + Skin.HasSetting(videotv) + !Window.IsActive(2)</visible>
 				<posx>854</posx>
 				<posy>400</posy>
 				<label>31999</label>			
@@ -194,7 +177,7 @@
 		<control type="group">
 			<include>ViewChangeAnimRight</include>		
 			<control type="image">
-				<visible>!Skin.HasSetting(videotv) + !Window.IsActive(2)</visible>
+				<visible>[Skin.HasSetting(videotv) + Skin.HasSetting(showcasetv) + !Window.IsActive(2)] | [!Skin.HasSetting(videotv) + !Window.IsActive(2)]</visible>
 				<posx>975</posx>
 				<posy>277</posy>
 				<width>186</width>
@@ -203,7 +186,7 @@
 			</control>
 			<control type="label">
 				<include>ViewChangeLabel</include>
-				<visible>!Skin.HasSetting(videotv) + !Window.IsActive(2)</visible>
+				<visible>[Skin.HasSetting(videotv) + Skin.HasSetting(showcasetv) + !Window.IsActive(2)] | [!Skin.HasSetting(videotv) + !Window.IsActive(2)]</visible>
 				<posx>854</posx>
 				<posy>400</posy>
 				<label>31751</label>
