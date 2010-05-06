@@ -305,6 +305,18 @@
 		</control>
 	</include>
 
+	<include name="miniflowbutton">
+	<control type="togglebutton" id="917">
+			<label>Flow: Mini</label>
+			<altlabel>Flow: Full</altlabel>
+			<usealttexture>Skin.HasSetting(fullflow)</usealttexture>
+			<include>Objects_MediaMenuButton</include>
+			<onclick>Skin.ToggleSetting(fullflow)</onclick>
+			<onclick>XBMC.ReloadSkin()</onclick>
+			<visible>Control.IsVisible(57)</visible>
+		</control>
+		</include>
+
 	<include name="Objects_ThumbsButton">
 		<control type="togglebutton" id="920">
 			<label>31071</label>

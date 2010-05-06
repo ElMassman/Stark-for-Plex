@@ -298,6 +298,7 @@
             <visible>Control.IsVisible(57) + Container.OnNext + ![Skin.HasSetting(flattenshowcase) | Container.Content(episodes)]</visible>
             <animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>50</posx>
                 <visible>Container.OnNext</visible>
                 <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
@@ -322,6 +323,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>150</posx>
                 <animation effect="rotatey" center="50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -344,6 +346,7 @@
                 </control>
             </control>
             <control type="group">
+		<include condition="!Skin.HasSetting(fullflow)">leftfadeout</include>
                 <posx>250</posx>
                 <animation effect="rotatey" center="150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -410,6 +413,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>1060</posx>
                 <visible>!Container.OnNext</visible>
                 <animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
@@ -434,6 +438,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>960</posx>
                 <animation effect="rotatey" center="1330" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -456,6 +461,7 @@
                 </control>
             </control>
             <control type="group">
+		<include condition="!Skin.HasSetting(fullflow)">rightfadein</include>
                 <posx>860</posx>
                 <animation effect="rotatey" center="1230" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -579,6 +585,7 @@
             <visible>Control.IsVisible(57) + Container.OnPrevious + ![Skin.HasSetting(flattenshowcase) | Container.Content(episodes)]</visible>
             <animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>960</posx>
                 <visible>Container.OnPrevious</visible>
                 <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
@@ -603,6 +610,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>860</posx>
                 <animation effect="rotatey" center="1230" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -625,6 +633,7 @@
                 </control>
             </control>
             <control type="group">
+		<include condition="!Skin.HasSetting(fullflow)">rightfadeout</include>
                 <posx>760</posx>
                 <animation effect="rotatey" center="1130" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -696,6 +705,7 @@
                 <animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
                 <animation effect="rotatey" center="-150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
                         <info>Container(57).ListItem(-5).Icon</info>
@@ -715,6 +725,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>50</posx>
                 <animation effect="rotatey" center="-50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -737,6 +748,7 @@
                 </control>
             </control>
             <control type="group">
+		<include condition="!Skin.HasSetting(fullflow)">leftfadein</include>
                 <posx>150</posx>
                 <animation effect="rotatey" center="50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
@@ -866,6 +878,7 @@
             <animation effect="fade" time="200">WindowClose</animation>
             <visible>Control.IsVisible(57) + !Control.IsVisible(7001) + !Control.IsVisible(7002) + [Control.IsVisible(970) + !Container.Content(episodes)]</visible>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>50</posx>
                 <animation effect="rotatey" center="-50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
@@ -892,6 +905,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>150</posx>
                 <animation effect="rotatey" center="50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
@@ -996,6 +1010,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>960</posx>
                 <animation effect="rotatey" center="1330" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
@@ -1022,6 +1037,7 @@
                 </control>
             </control>
             <control type="group">
+		<visible>Skin.HasSetting(fullflow)</visible>
                 <posx>860</posx>
                 <animation effect="rotatey" center="1230" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">

@@ -101,15 +101,7 @@
 				
 				<include>Objects_FlattenFlowButton</include>
 
-				<control type="togglebutton" id="917">
-			<label>Flow: Mini</label>
-			<altlabel>Flow: Full</altlabel>
-			<usealttexture>Skin.HasSetting(fullflow)</usealttexture>
-			<include>Objects_MediaMenuButton</include>
-			<onclick>Skin.ToggleSetting(fullflow)</onclick>
-			<onclick>XBMC.ReloadSkin()</onclick>
-			<visible>Control.IsVisible(57)</visible>
-		</control>
+				<include>miniflowbutton</include>
 				
 				<control type="button" id="3">
 					<label>103</label>

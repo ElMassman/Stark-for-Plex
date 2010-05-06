@@ -73,7 +73,7 @@
 			<onup>Container.SetViewMode(50)</onup>
 			<onup>SetFocus(900)</onup>
 			<onright>Container.SetViewMode(57)</onright>
-	<include condition="[!Skin.HasSetting(showcasetv) + Skin.HasSetting(videotv)]">InfoPanelButton</include>
+	<include condition="[!Skin.HasSetting(showcasetv) + Skin.HasSetting(videotv) + !Window.IsActive(2)]">InfoPanelButton</include>
 	<include condition="Window.IsActive(2)">StripShowButton</include>
 			<onright>SetFocus(900)</onright>
 			<ondown>Container.SetViewMode(55)</ondown>
