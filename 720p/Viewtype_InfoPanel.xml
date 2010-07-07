@@ -1,0 +1,548 @@
+<includes>
+	<include name="InfoPanelVisible">
+        <visible>Control.IsVisible(56)</visible>
+    </include>
+	<include name="ListFade2">
+		<control type="image" id="102">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>0</width>
+			<height>0</height>
+			<texture>-</texture>
+			<visible>Control.HasFocus(56) + [!Container().OnNext + !Container().OnPrevious]</visible>
+			<animation effect="fade" start="-100" end="0" time="150">Visible</animation>
+		</control>
+	</include>
+	<include name="InfoPanelWatchedxEpisode">
+		<posx>180</posx>
+	</include>
+	<include name="InfoPanelWatchedx">
+		<posx>207</posx>
+	</include>
+	<include name="InfoPanelLabel_Width_Slim">
+		<width>201</width>
+	</include>
+	<include name="InfoPanelLabel_MainSmall_Slim">
+		<posx>0</posx>
+		<posy>0</posy>
+		<include condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">InfoPanelLabel_WidthMusic_Slim</include>
+		<include condition="![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">InfoPanelLabel_Width_Slim</include>
+		<height>30</height>
+		<font>Font_SettingsSectionMenuButton</font>
+		<aligny>center</aligny>
+		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | [Window.IsActive(25)]]">Conditional</animation>
+	</include>
+	<include name="InfoPanelLabel_DetailSmall_Slim">
+		<posx>100</posx>
+		<posy>24</posy>
+		<width>217</width>
+		<height>25</height>
+		<font>Font_SettingsMainLabelSmall</font>
+		<align>left
+</align>
+		<aligny>center</aligny>
+		<animation effect="slide" start="-25,0" end="-25,0" time="0" condition="Window.IsActive(2) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | [[Window.IsActive(502) | Window.IsActive(501)] + !Container.Content(songs) + !Container.Content(albums)]">Conditional</animation>
+	</include>
+	<include name="InfoPanelLabel_TrackSmall_Slim">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>217</width>
+		<height>50</height>
+		<font>Font_ListDetail</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<animation effect="slide" start="0,-11" end="0,-11" time="0" condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | [Window.IsActive(25) + Skin.HasSetting(videotv)]">Conditional</animation>
+	</include>
+	<include name="List_Objects_Slim">
+		<posx>61</posx>
+		<posy>638</posy>
+		<width>183</width>
+		<height>45</height>
+		<font>Font_ListObjects</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<include>Colour_PanelItemUnfocused</include>
+		<visible>Control.IsVisible(56)</visible>
+	</include>
+	<include name="Animation_ListPanelSlide_Slim">
+		<animation effect="slide" time="700" start="-800,0" end="0,0" tween="cubic" easing="out">Visible</animation>
+		<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
+	</include>
+	<include name="Viewtype_InfoPanel">
+		<control type="group">
+			<visible>Control.IsVisible(56)</visible>
+				<!-- Infopanel -->
+	<control type="image">
+	<posx>42</posx>
+	<posy>42</posy>
+	<width>1195</width>
+	<height>672</height>
+	<texture diffuse="infopanel/infopanelfanart.png">infopanel/back.png</texture>		
+	<visible>!IsEmpty(listitem.property(fanart_image) | !Skin.HasSetting(nofanart)</visible>
+	</control>
+	<control type="image">
+	<posx>42</posx>
+	<posy>42</posy>
+	<width>1195</width>
+	<height>672</height>
+	<texture diffuse="infopanel/infopanelfanart.png">$INFO[listitem.property(fanart_image)]</texture>		
+	</control>
+	<control type="image">
+	<posx>42</posx>
+	<posy>42</posy>
+	<width>1195</width>
+	<height>672</height>
+	<texture diffuse="infopanel/infopanelfanart.png">$INFO[Fanart.Image]</texture>		
+	</control>
+	<control type="image">
+	<posx>23</posx>
+	<posy>23</posy>
+	<width>1233</width>
+	<height>673</height>
+	<texture>infopanel/infopanel_panelback.png</texture>
+	<visible>!Container.Content(episodes) + !Container.Content(movies)</visible>		
+	</control>
+	<control type="image">
+	<posx>23</posx>
+	<posy>23</posy>
+	<width>1233</width>
+	<height>673</height>
+	<texture>infopanel/infopanel_panelback_episode.png</texture>
+	<visible>Container.Content(episodes) | Container.Content(movies)</visible>		
+	</control>			
+	<control type="image">
+	<posx>42</posx>
+	<posy>28</posy>
+	<width>1196</width>
+	<height>650</height>
+	<texture>settings/settings_panelfront.png</texture>		
+	</control>
+	<control type="image">
+		<posx>234</posx>
+		<posy>40</posy>
+		<width>1035</width>
+		<height>638</height>
+		<texture>settings/settings_intframe_bottom.png</texture>
+		<visible>Container.Content(episodes) | Container.Content(movies)</visible>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+	</control>
+	<control type="image">
+		<posx>331</posx>
+		<posy>58</posy>
+		<width>841</width>
+		<height>471</height>
+		<texture>$INFO[listitem.property(fanart_image)]</texture>
+		<aspectratio>scale</aspectratio>
+		<visible>Container.Content(movies)</visible>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+	</control>
+	<control type="image">
+		<posx>331</posx>
+		<posy>58</posy>
+		<width>841</width>
+		<height>471</height>
+		<texture>$INFO[ListItem.Icon]</texture>
+		<aspectratio>scale</aspectratio>
+		<visible>Container.Content(episodes)</visible>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+	</control>
+	<control type="image">
+				<posx>331</posx>
+				<posy>43</posy>
+				<width>842</width>
+				<height>634</height>
+				<texture>settings/settings_intframe_top.png</texture>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<visible>Container.Content(episodes) | Container.Content(movies)</visible>
+			</control>
+	<control type="image">
+				<posx>572</posx>
+				<posy>58</posy>
+				<width>600</width>
+				<height>471</height>
+				<texture flipx="true">showcase/showcase_vignette.png</texture>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<visible>[Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(nomediaflags)</visible>
+			</control>
+			<control type="image">
+				<posx>331</posx>
+				<posy>58</posy>
+				<width>600</width>
+				<height>471</height>
+				<texture>showcase/showcase_vignette.png</texture>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<visible>[Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(nomediaflags)</visible>
+			</control>
+	<include>Furniture_InfoPanelMediaFlags</include>
+		<---Infopanel List--->
+			<control type="list" id="56">
+				<viewtype label="31999">infopanel</viewtype>
+				<posx>-08</posx>
+				<posy>60</posy>
+				<width>305</width>
+				<height>585</height>
+				<pagecontrol>2505</pagecontrol>
+				<onleft>2505</onleft>
+				<onright>-</onright>
+				<onup>56</onup>
+				<ondown>56</ondown>
+				<itemlayout height="65">
+					<control type="label">
+			<include>InfoPanelLabel_MainSmall_Slim</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Label</info>
+						<visible>[[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)] + !Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+				<include>InfoPanelLabel_MainSmall_Slim</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Label</info>
+						<visible>Window.IsActive(501) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>Colour_PanelItemUnfocused</include>
+						<label>$INFO[ListItem.Year]</label>
+		<visible>!Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+			<posy>42</posy>
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>Colour_PanelItemUnfocused</include>
+						<label>Unwatched: $INFO[ListItem.Property(UnWatchedEpisodes)]/$INFO[ListItem.Episode]</label>
+			<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+				<control type="label">
+			<posy>42</posy>
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>Colour_PanelItemUnfocused</include>
+						<label></label>
+			<visible>Container.Content(movies)</visible>
+					</control>
+					<control type="label">
+				<posx>75</posx>
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>Colour_PanelItemUnfocused</include>
+						<label>S$INFO[ListItem.Season]E$INFO[ListItem.Episode]</label>
+		<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+			<posy>41</posy>
+			<posx>75</posx>
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>Colour_PanelItemUnfocused</include>
+						<label>Aired: $INFO[ListItem.Date]</label>
+			<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<include>InfoPanelLabel_MainSmall_Slim</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Title</info>
+						<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="image">
+	            	    <description>IMDB Star Rating</description>
+	            	    	<posy>25</posy>
+	              		<posx>126</posx>
+ 		               	<width>80</width>
+ 		               	<height>20</height>
+ 		               	<info>ListItem.StarRating</info>
+				<visible>Control.IsVisible(56)</visible>
+ 		               	<colordiffuse>55FFFFFF</colordiffuse>
+						<visible>Container.Content(episodes) + !Skin.HasSetting(movieratingtext)</visible>
+    	      		</control>								<control type="image">
+	            	    <description>IMDB Star Rating</description>
+	            	    	<posy>25</posy>
+	              		<posx>110</posx>
+ 		               	<width>80</width>
+ 		               	<height>20</height>
+ 		               	<info>ListItem.StarRating</info>
+				<visible>Control.IsVisible(56)</visible>
+ 		               	<colordiffuse>55FFFFFF</colordiffuse>
+						<visible>[Container.Content(tvshows) | Container.Content(movies)] + !Skin.HasSetting(movieratingtext)</visible>
+    	      		</control>
+			<control type="image">
+					<include condition="Container.Content(episodes)">InfoPanelWatchedxEpisode</include>
+					<include condition="!Container.Content(episodes)">InfoPanelWatchedx</include>
+					<posy>23</posy>
+					<width>45</width>
+					<height>45</height>
+					<visible>Skin.HasSetting(WatchedOverlay) + !IsEmpty(ListItem(0).Overlay)</visible>
+					<info>ListItem.Overlay</info>
+				</control>
+				</itemlayout>
+				<focusedlayout height="65">
+					<control type="image">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>216</width>
+						<height>65</height>
+						<texture>settings/settings_leftmenufocus.png</texture>
+						<visible>Control.IsVisible(56) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+					</control>
+					<control type="label">
+						<include>InfoPanelLabel_MainSmall_Slim</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Label</info>
+						<visible>Window.IsActive(501) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<include>InfoPanelLabel_MainSmall_Slim</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Title</info>
+						<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>detailcolornofocus</include>
+						<label>[UPPERCASE]$INFO[ListItem.Episode] [/UPPERCASE]$LOCALIZE[31938]</label>
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<include>InfoPanelLabel_MainSmall_Slim</include>
+						<include>listcolorfocusip</include>
+						<info>ListItem.Label</info>
+						<visible>[[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)] + !Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<include>InfoPanelLabel_MainSmall_Slim</include>
+						<include>listcolorfocusip</include>
+						<info>ListItem.Label</info>
+						<visible>Window.IsActive(501) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(artists)</visible>
+					</control>
+			<control type="label">
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>listcolorfocusip</include>
+						<label>$INFO[ListItem.Year]</label>
+		<visible>!Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+			<posy>41</posy>
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>listcolorfocusip</include>
+						<label>Unwatched: $INFO[ListItem.Property(UnWatchedEpisodes)]/$INFO[ListItem.Episode]</label>
+			<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+			<control type="label">
+			<posy>41</posy>
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>listcolorfocusip</include>
+						<label></label>
+			<visible>Container.Content(movies)</visible>
+					</control>
+			<control type="label">
+				<posx>75</posx>
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>listcolorfocusip</include>
+						<label>S$INFO[ListItem.Season]E$INFO[ListItem.Episode]</label>
+		<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+			<posy>41</posy>
+			<posx>75</posx>
+				<include>InfoPanelLabel_DetailSmall_Slim</include>
+						<include>listcolorfocusip</include>
+						<label>Aired: $INFO[ListItem.Date]</label>
+			<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="image">
+	            	    <description>IMDB Star Rating</description>
+	            	    	<posy>25</posy>
+	              		<posx>110</posx>
+ 		               	<width>80</width>
+ 		               	<height>20</height>
+ 		               	<info>ListItem.StarRating</info>
+				<visible>Control.IsVisible(56)</visible>
+ 		               	<colordiffuse>ff2e2e2e</colordiffuse>
+						<visible>[Container.Content(tvshows) | Container.Content(movies)] + !Skin.HasSetting(movieratingtext)</visible>
+    	      		</control>
+			<control type="image">
+	            	    <description>IMDB Star Rating</description>
+	            	    	<posy>25</posy>
+	              		<posx>126</posx>
+ 		               	<width>80</width>
+ 		               	<height>20</height>
+ 		               	<info>ListItem.StarRating</info>
+				<visible>Control.IsVisible(56)</visible>
+ 		               	<colordiffuse>ff2e2e2e</colordiffuse>
+						<visible>Container.Content(episodes) + !Skin.HasSetting(movieratingtext)</visible>
+    	      		</control>
+					<control type="image">
+					<include condition="Container.Content(episodes)">InfoPanelWatchedxEpisode</include>
+					<include condition="!Container.Content(episodes)">InfoPanelWatchedx</include>
+					<posy>23</posy>
+					<width>45</width>
+					<height>45</height>
+					<visible>Skin.HasSetting(WatchedOverlay) + !IsEmpty(ListItem(0).Overlay)</visible>
+					<info>ListItem.Overlay</info>
+				</control>
+					<control type="label">
+						<include>InfoPanelLabel_MainSmall_Slim</include>
+						<include>listcolorfocusip</include>
+						<info>ListItem.Title</info>
+						<visible>Container.Content(episodes)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label" id="161">
+				<include>List_Objects_Slim</include>
+				<label>$INFO[Container(56).NumItems] $LOCALIZE[31938]</label>
+				<visible>Container.Content(episodes) + Control.IsVisible(56)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>List_Objects_Slim</include>
+				<label>$INFO[Container(56).NumItems] $LOCALIZE[31934]</label>
+				<visible>Container.Content(movies) + Control.IsVisible(56)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>List_Objects_Slim</include>
+				<label>$INFO[Container(56).NumItems] $LOCALIZE[31928]</label>
+				<visible>Container.Content(albums) + Control.IsVisible(56)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>List_Objects_Slim</include>
+				<label>$INFO[Container(56).NumItems] $LOCALIZE[31927]</label>
+				<visible>Container.Content(artists) + Control.IsVisible(56)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>List_Objects_Slim</include>
+				<label>$INFO[Container(56).NumItems] $LOCALIZE[31937]</label>
+				<visible>Container.Content(seasons) + Control.IsVisible(56)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>List_Objects_Slim</include>
+				<label>$INFO[Container(56).NumItems] $LOCALIZE[31933]</label>
+				<visible>Container.Content(tvshows) + Control.IsVisible(56)</visible>
+			</control>
+			<control type="label">
+				<include>List_Objects_Slim</include>
+				<label>$INFO[Container(56).NumItems] $LOCALIZE[31935]</label>
+				<visible>!Control.IsVisible(161) + Control.IsVisible(56)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>List_Objects_Slim</include>
+				<label>$INFO[Container(56).NumItems] $LOCALIZE[31936]</label>
+				<visible>Container.Content(songs) + Control.IsVisible(56)</visible>
+			</control>
+			<control type="label" id="161">
+				<include>List_Objects_Slim</include>
+				<label>$INFO[Container(56).NumItems] $LOCALIZE[31923]</label>
+				<visible>Container.Content(years) + Control.IsVisible(56)</visible>
+			</control>
+		</control>
+
+	<!-- Under Thumb Info  -->
+	<control type="label">
+	<posx>360</posx>
+	<posy>540</posy>
+	<font>Font_SettingsMainLabelBig</font>
+	<width>788</width>
+	<align>left</align>
+	<label>[COLOR 9b3cd2fd]$INFO[ListItem.TVShowTitle][COLOR] [COLOR 9bFFFFFF]$INFO[ListItem.Title][COLOR]</label>
+	<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+	<visible>[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(56)</visible>
+	</control>
+	<control type="image">
+		<posx>360</posx>
+		<posy>540</posy>
+		<height>1</height>
+		<width>450</width>
+		<texture>infopanel/line.png</texture>
+		<visible>[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(56)</visible>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+	</control>
+	<control type="image">
+		<posx>360</posx>
+		<posy>585</posy>
+		<height>1</height>
+		<width>550</width>
+		<texture>infopanel/line.png</texture>
+		<visible>[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(56)</visible>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+	</control>
+	<control type="image">
+		<posx>425</posx>
+		<posy>586</posy>
+		<height>73</height>
+		<width>1</width>
+		<texture>infopanel/linever.png</texture>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<visible>!IsEmpty(ListItem.Plot)</visible>
+		<visible>[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(56)</visible>
+	</control>
+	<control type="image">
+		<posx>360</posx>
+		<posy>659</posy>
+		<height>1</height>
+		<width>650</width>
+		<texture>infopanel/line.png</texture>
+		<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+		<visible>!IsEmpty(ListItem.Plot)</visible>
+		<visible>[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(56)</visible>
+	</control>
+<control type="label">
+	<posx>418</posx>
+	<posy>579</posy>
+	<width>100</width>
+	<align>right</align>
+	<height>70</height>
+	<include>detailcolornofocus</include>
+	<font>Font_MainMenu</font>
+	<visible>!IsEmpty(ListItem.Plot)</visible>
+	<visible>Control.IsVisible(56) + [Window.IsActive(1) | Window.IsActive(24) | Container.Content(episodes)]</visible>
+	<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+	<info>ListItem.Episode</info>
+	</control>
+<control type="textbox">
+	<posx>432</posx>
+	<posy>587</posy>
+	<width>710</width>
+	<align>left</align>
+	<height>70</height>
+	<include>detailcolornofocus</include>
+	<font>Font_FSInfoPlot</font>
+	<visible>!IsEmpty(ListItem.Plot)</visible>
+	<visible>Control.IsVisible(56) + [Window.IsActive(1) | Window.IsActive(24) | [Container.Content(movies) | Container.Content(episodes)]]</visible>
+	<include>Animation_CommonFade</include>
+		<include>Animation_HideShowcase</include>
+	<autoscroll time="1500" delay="8000" repeat="9500">Skin.HasSetting(allowscroll)</autoscroll>
+	<info>ListItem.Plot</info>
+	</control>	
+
+		<!-- /// End of Plot Window \\\ -->
+	
+ 		<control type="scrollbar" id="2505">
+			<description>Scroll Bar</description>
+			<posx>-10</posx>
+			<posy>83</posy>
+			<width>65</width>
+			<height>545</height>
+			<visible allowhiddenfocus="false">Control.IsVisible(56)</visible>
+			<texturesliderbackground>windows/scrollbarbacklist.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
+			<textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+			<pulseonselect/>
+			<orientation>vertical</orientation>
+			<showonepage>false</showonepage>
+			<onup>2505</onup>
+			<ondown>2505</ondown>
+			<onleft>7000</onleft>
+			<onright>56</onright>
+			<include>Animation_CommonFade</include>
+		</control>
+	</include>
+</includes>
